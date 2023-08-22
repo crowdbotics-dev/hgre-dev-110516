@@ -30,6 +30,24 @@ function api_v1_vwcss_partial_update(payload) {
 function api_v1_vwcss_destroy(payload) {
   return hgredevAPI.delete(`/api/v1/vwcss/${payload.id}/`)
 }
+function api_v1_xzaq_list(payload) {
+  return hgredevAPI.get(`/api/v1/xzaq/`)
+}
+function api_v1_xzaq_create(payload) {
+  return hgredevAPI.post(`/api/v1/xzaq/`, payload)
+}
+function api_v1_xzaq_retrieve(payload) {
+  return hgredevAPI.get(`/api/v1/xzaq/${payload.id}/`)
+}
+function api_v1_xzaq_update(payload) {
+  return hgredevAPI.put(`/api/v1/xzaq/${payload.id}/`, payload)
+}
+function api_v1_xzaq_partial_update(payload) {
+  return hgredevAPI.patch(`/api/v1/xzaq/${payload.id}/`, payload)
+}
+function api_v1_xzaq_destroy(payload) {
+  return hgredevAPI.delete(`/api/v1/xzaq/${payload.id}/`)
+}
 function rest_auth_login_create(payload) {
   return hgredevAPI.post(`/rest-auth/login/`, payload)
 }
@@ -73,6 +91,12 @@ export const apiService = {
   api_v1_vwcss_update,
   api_v1_vwcss_partial_update,
   api_v1_vwcss_destroy,
+  api_v1_xzaq_list,
+  api_v1_xzaq_create,
+  api_v1_xzaq_retrieve,
+  api_v1_xzaq_update,
+  api_v1_xzaq_partial_update,
+  api_v1_xzaq_destroy,
   rest_auth_login_create,
   rest_auth_logout_retrieve,
   rest_auth_logout_create,
