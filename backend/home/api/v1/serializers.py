@@ -1,5 +1,5 @@
 from django.contrib.auth import get_user_model
-from home.models import Vwcss,Vwcss
+from home.models import Vwcss,XZAQ,Vwcss,XZAQ
 from django.http import HttpRequest
 from django.utils.translation import ugettext_lazy as _
 from allauth.account import app_settings as allauth_settings
@@ -80,4 +80,10 @@ class VwcssSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Vwcss
+        fields = "__all__"
+
+class XZAQSerializer(serializers.ModelSerializer):
+
+    class Meta:
+        model = XZAQ
         fields = "__all__"

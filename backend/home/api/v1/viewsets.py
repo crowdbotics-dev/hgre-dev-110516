@@ -1,6 +1,6 @@
 from rest_framework import viewsets
-from home.models import Vwcss,Vwcss,Vwcss
-from .serializers import VwcssSerializer,VwcssSerializer,VwcssSerializer
+from home.models import Vwcss,XZAQ,Vwcss,XZAQ,Vwcss,XZAQ
+from .serializers import VwcssSerializer,XZAQSerializer,VwcssSerializer,XZAQSerializer,VwcssSerializer,XZAQSerializer
 from rest_framework import authentication
 from rest_framework.authtoken.serializers import AuthTokenSerializer
 from rest_framework.viewsets import ModelViewSet, ViewSet
@@ -37,3 +37,8 @@ class VwcssViewSet(viewsets.ModelViewSet):
     serializer_class = VwcssSerializer
     authentication_classes = (authentication.SessionAuthentication, authentication.TokenAuthentication)
     queryset = Vwcss.objects.all()
+
+class XZAQViewSet(viewsets.ModelViewSet):
+    serializer_class = XZAQSerializer
+    authentication_classes = (authentication.SessionAuthentication, authentication.TokenAuthentication)
+    queryset = XZAQ.objects.all()
